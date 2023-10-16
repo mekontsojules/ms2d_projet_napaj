@@ -13,7 +13,7 @@ Ce projet vise à créer un système de gestion de pâtisserie en utilisant ASP.
 
 ## Installation
 
-1. Clônez le dépôt : `git clone https://github.com/votreutilisateur/projet-patisserie-aspnetcore.git`
+1. Clônez le dépôt : `[git clone https://github.com/votreutilisateur/projet-patisserie-aspnetcore.git](https://github.com/mekontsojules/ms2d_projet_napaj.git)`
 2. Accédez au répertoire du projet : `cd projet-patisserie-aspnetcore`
 3. Configurez votre base de données dans le fichier `appsettings.json`.
 4. Ouvrez une ligne de commande dans le répertoire du projet et exécutez la commande : `dotnet restore`
@@ -27,11 +27,9 @@ Ce projet vise à créer un système de gestion de pâtisserie en utilisant ASP.
 
 Le projet utilise une base de données avec les tables suivantes :
 - `Utilisateurs` : Pour gérer l'authentification.
-- `Prix d'Achat` : Pour importer et enregistrer les prix d'achat des ingrédients.
 - `Ingrédients` : Pour stocker les informations sur les ingrédients.
 - `Recettes` (à ajouter ultérieurement) : Pour gérer les recettes.
 - `Détail de la Recette` (à ajouter ultérieurement) : Pour définir les ingrédients et quantités dans les recettes.
-- `Export au format CSV` : Pour enregistrer les exports des prix des ingrédients au format CSV.
 
 ## Contribuer
 

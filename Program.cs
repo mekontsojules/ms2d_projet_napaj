@@ -1,8 +1,22 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Ms2dNapaj.DAL;
+using Ms2dNapaj.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
+//ajout du service dbcontext pour la base de donnée
+builder.Services.AddDbContext<NapajDBContext>(options =>
+              options.UseSqlServer(
+                 builder.Configuration.GetConnectionString("NapajConnexionString")));
+/*builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
+    .AddRoles<IdentityRole>()
+    .AddEntityFrameworkStores<NapajDBContext>()
+    .AddSignInManager<SignInManager<ApplicationUser>>();*/
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

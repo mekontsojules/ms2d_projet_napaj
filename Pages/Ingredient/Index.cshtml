@@ -29,7 +29,7 @@
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-lg-3 col-xl-2">
-								<a asp-page="Ingredient/Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Nouvel Ingredient</a>
+								<a asp-page="./Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Nouvel Ingredient</a>
 							</div>
 							<div class="col-lg-9 col-xl-10">
 								<form class="float-lg-end">
@@ -53,21 +53,7 @@
 												</div>
 											</div>
 										</div>
-										
-										@* <div class="col">
-											<div class="btn-group" role="group">
-												<button type="button" class="btn btn-white">Price Range</button>
-												<div class="btn-group" role="group">
-													<button id="btnGroupDrop1" type="button" class="btn btn-white dropdown-toggle dropdown-toggle-nocaret px-1" data-bs-toggle="dropdown" aria-expanded="false">
-														<i class='bx bx-slider'></i>
-													</button>
-													<ul class="dropdown-menu dropdown-menu-start" aria-labelledby="btnGroupDrop1">
-														<li><a class="dropdown-item" href="#">Dropdown link</a></li>
-														<li><a class="dropdown-item" href="#">Dropdown link</a></li>
-													</ul>
-												</div>
-											</div>
-										</div> *@
+									
 									</div>
 								</form>
 							</div>
@@ -104,7 +90,7 @@
 									<tr>
 										<td>@ingredient.Id</td>
 										<td>@ingredient.Name</td>
-										<td>@ingredient.PurchasePrice</td>
+										<td>@string.Format("{0:C}", ingredient.PurchasePrice)</td>
 										<td>@ingredient.Supplier.Name</td>
 										<td>@ingredient.ImportDate</td>
 										<td>@ingredient.CurrentStock</td>

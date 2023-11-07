@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Ms2dNapaj.DAL;
 
 namespace Ms2dNapaj.Pages.Supplier
 {
+
+    [Authorize]
     public class CreateModel : PageModel
     {
         private readonly NapajDBContext _context;

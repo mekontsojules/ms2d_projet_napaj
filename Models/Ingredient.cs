@@ -8,8 +8,11 @@
         public int SupplierId { get; set; }
         public DateTime ImportDate { get; set; } = DateTime.Now;
         public decimal CurrentStock { get; set; }
+        public decimal MinimumStock { get; set; }
         public string Allergens { get; set; }
         public string UnitedMesure { get;set; }
         public virtual Supplier Supplier { get; set; }
+
+
     }
 }

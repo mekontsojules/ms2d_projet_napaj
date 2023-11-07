@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -6,6 +7,7 @@ using Ms2dNapaj.Models;
 
 namespace Ms2dNapaj.Pages.Ingredient
 {
+    [Authorize]
     public class IndexModel : PageModel
     {
 		private readonly NapajDBContext _context;

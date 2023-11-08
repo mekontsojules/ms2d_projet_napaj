@@ -12,7 +12,7 @@ builder.Services.AddRazorPages();
 
 //ajout du service dbcontext pour la base de donn�e
 builder.Services.AddDbContext<NapajDBContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("NapajConnexionString")));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
     options.SignIn.RequireConfirmedAccount = false;

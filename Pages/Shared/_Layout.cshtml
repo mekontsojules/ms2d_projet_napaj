@@ -381,7 +381,7 @@
 								<div class="dropdown-divider mb-0"></div>
 							</li>
 							<li>
-								<a class="dropdown-item d-flex align-items-center" href="javascript:;"><i class="bx bx-log-out-circle"></i><span>Déconnexion</span></a>
+								<a class="dropdown-item d-flex align-items-center" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Page("/", new { area = "" })"><i class="bx bx-log-out-circle"></i><span>Déconnexion</span></a>
 							</li>
 						</ul>
 					</div>

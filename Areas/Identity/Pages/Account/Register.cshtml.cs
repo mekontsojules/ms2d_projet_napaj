@@ -123,13 +123,16 @@ namespace Ms2dNapaj.Areas.Identity.Pages.Account
         {
             returnUrl ??= Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
-            if (ModelState.IsValid)
-            {
+           
                 var user = CreateUser();
+                user.Nom = Input.Nom;
+                user.Prenom = Input.Prenom;
+                user.sexe = Input.sexe;
+            user.EmailConfirmed = true;
 
-                await _userStore.SetUserNameAsync(user, Input.Email, CancellationToken.None);
-                await _emailStore.SetEmailAsync(user, Input.Email, CancellationToken.None);
-				var result = await _userManager.CreateAsync(user, Input.UserName);
+                await _userStore.SetUserNameAsync(user, Input.UserName, CancellationToken.None);
+                await _emailStore.SetEmailAsync(user, Input.UserName, CancellationToken.None);
+				var result = await _userManager.CreateAsync(user, Input.NormalizedEmail);
 
                 if (result.Succeeded)
                 {
@@ -161,7 +164,6 @@ namespace Ms2dNapaj.Areas.Identity.Pages.Account
                 {
                     ModelState.AddModelError(string.Empty, error.Description);
                 }
-            }
 
             // If we got this far, something failed, redisplay form
             return Page();

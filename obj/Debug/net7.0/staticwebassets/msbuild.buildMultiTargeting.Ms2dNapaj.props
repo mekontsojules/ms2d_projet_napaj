@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Ms2dNapaj.props" />
+</Project>

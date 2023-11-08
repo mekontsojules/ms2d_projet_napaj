@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\napaj\\Ms2dNapaj\\Ms2dNapaj.csproj": {}
+    "E:\\MS2D2 Limoges\\ALTERNANCE\\ALTERNANCE 1\\PROJET\\ms2d_projet_napaj\\Ms2dNapaj.csproj": {}
   },
   "projects": {
-    "C:\\code\\napaj\\Ms2dNapaj\\Ms2dNapaj.csproj": {
+    "E:\\MS2D2 Limoges\\ALTERNANCE\\ALTERNANCE 1\\PROJET\\ms2d_projet_napaj\\Ms2dNapaj.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\napaj\\Ms2dNapaj\\Ms2dNapaj.csproj",
+        "projectUniqueName": "E:\\MS2D2 Limoges\\ALTERNANCE\\ALTERNANCE 1\\PROJET\\ms2d_projet_napaj\\Ms2dNapaj.csproj",
         "projectName": "Ms2dNapaj",
-        "projectPath": "C:\\code\\napaj\\Ms2dNapaj\\Ms2dNapaj.csproj",
-        "packagesPath": "C:\\Users\\jrsme\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\napaj\\Ms2dNapaj\\obj\\",
+        "projectPath": "E:\\MS2D2 Limoges\\ALTERNANCE\\ALTERNANCE 1\\PROJET\\ms2d_projet_napaj\\Ms2dNapaj.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\MS2D2 Limoges\\ALTERNANCE\\ALTERNANCE 1\\PROJET\\ms2d_projet_napaj\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\jrsme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }

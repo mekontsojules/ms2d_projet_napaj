@@ -42,14 +42,14 @@
 							<div class="card-body">
 								<div class="p-4">
 									<div class="mb-3 text-center">
-										<img src="~/assets/images/logo-icon.png" width="60" alt="" />
+										<img src="~/images/napaj.png" width="100" alt="" />
 									</div>
 									<div class="text-center mb-4">
-										<h5 class="">Rocker Admin</h5>
+										<h5 class="">Napaj Admin</h5>
 										<p class="mb-0">Remplissez ce formulaire pour créer votre compte</p>
 									</div>
 									<div class="form-body">
-										<form class="row g-3">
+										<form class="row g-3" method="post">
 											<div class="col-12">
 												<label for="inputUsername" class="form-label">Nom</label>
 												<input type="text" class="form-control" asp-for="Input.Nom" id="inputUsername" placeholder="nom">
@@ -60,7 +60,7 @@
 											</div>
 											<div class="col-12">
 												<label for="inputEmailAddress" class="form-label"> Adresse Email</label>
-												<input type="email" class="form-control" id="inputEmailAddress" placeholder="example@user.com">
+												<input type="email" asp-for="Input.UserName" class="form-control" id="inputEmailAddress" placeholder="example@user.com">
 											</div>
 											<div class="col-12">
 												<label for="inputSelectCountry" class="form-label">sexe</label>
@@ -72,7 +72,7 @@
 											<div class="col-12">
 												<label for="inputChoosePassword" class="form-label">Password</label>
 												<div class="input-group" id="show_hide_password">
-													<input type="password" asp-for="Input.UserName" class="form-control border-end-0" id="inputChoosePassword" value="12345678" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
+													<input type="password" asp-for="Input.NormalizedEmail" class="form-control border-end-0" id="inputChoosePassword" value="Password123*" placeholder="Enter Password"> <a href="javascript:;" class="input-group-text bg-transparent"><i class='bx bx-hide'></i></a>
 												</div>
 											</div>
 											

@@ -15,7 +15,7 @@ builder.Services.AddDbContext<NapajDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("NapajConnexionString")));
 builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
 {
-    options.SignIn.RequireConfirmedAccount = true;
+    options.SignIn.RequireConfirmedAccount = false;
     // Configuration des r�gles de validation du mot de passe
     options.Password.RequireDigit = true; // N�cessite au moins un chiffre (0-9)
     options.Password.RequireLowercase = true; // N�cessite au moins une minuscule (a-z)

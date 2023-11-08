@@ -1,4 +1,6 @@
-﻿<!doctype html>
+﻿@using System.Security.Claims;
+
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -297,7 +299,7 @@
 												</div>
 												<div class="flex-grow-1">
 													<h6 class="msg-name">
-														jules auffred<span class="msg-time float-end">
+														@User.Identity.Name<span class="msg-time float-end">
 															5 sec
 															ago
 														</span>

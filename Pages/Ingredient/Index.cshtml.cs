@@ -28,8 +28,10 @@ namespace Ms2dNapaj.Pages.Ingredient
 			}
 			catch (Exception ex)
 			{
+
 				Ingredients = new List<Ms2dNapaj.Models.Ingredient>(); // Initialisation d'une liste vide en cas d'échec
 				ErrorMessage = "Une erreur s'est produite lors de la récupération des ingrédients. Veuillez réessayer.";
+
 			}
 		}
 	}

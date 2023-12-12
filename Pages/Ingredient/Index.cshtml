@@ -32,9 +32,12 @@
 								<a asp-page="./Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Créer</a>
 							</div>
 							<div class="col-lg-3 col-xl-2">
-								<a  class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-book'></i>liste d'achat</a>
+										<a asp-page-handler="GenerateShoppingList" class="btn btn-secondary mb-3 mb-lg-0"><i class='bx bxs-book'></i>liste d'achat excel</a>
 							</div>
-							<div class="col-lg-6 col-xl-8">
+							<div class="col-lg-3 col-xl-2">
+								<a asp-page-handler="GenerateShoppingListPDF" class="btn btn-success mb-3 mb-lg-0"><i class='bx bxs-book'></i>liste d'achat PDF</a>
+							</div>
+							<div class="col-lg-3 col-xl-6">
 								<form class="float-lg-end">
 									<div class="row row-cols-lg-2 row-cols-xl-auto g-2">
 										<div class="col">
@@ -98,7 +101,7 @@
 										<td>@ingredient.ImportDate</td>
 										<td>@ingredient.CurrentStock @ingredient.UnitedMesure</td>
 										<td>@ingredient.Allergens</td>
-										<td>@ingredient.MinimumStock</td>
+										<td>@ingredient.MinimumStock  @ingredient.UnitedMesure</td>
 										<td>
 											<a asp-page="/DetailsIngredient" asp-route-id="1" class="btn btn-info">
 												<i class='bx bx-info-circle'></i>

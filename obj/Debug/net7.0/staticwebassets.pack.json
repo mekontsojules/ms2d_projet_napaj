@@ -3565,6 +3565,26 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231212143107.xlsx",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212143107.xlsx"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231212143746.xlsx",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212143746.xlsx"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231212144836.xlsx",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212144836.xlsx"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231212145127.xlsx",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212145127.xlsx"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231212150550.xlsx",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212150550.xlsx"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ms2dNapaj.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

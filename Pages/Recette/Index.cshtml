@@ -1,0 +1,133 @@
+﻿@page
+@model Ms2dNapaj.Pages.Recette.IndexModel
+@{
+}
+
+
+<!--start page wrapper -->
+<div class="page-wrapper">
+	<div class="page-content">
+		<!--breadcrumb-->
+		<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+			<div class="breadcrumb-title pe-3">Recette</div>
+			<div class="ps-3">
+				<nav aria-label="breadcrumb">
+					<ol class="breadcrumb mb-0 p-0">
+						<li class="breadcrumb-item">
+							<a href="javascript:;"><i class="bx bx-home-alt"></i></a>
+						</li>
+						<li class="breadcrumb-item active" aria-current="page">Listing</li>
+					</ol>
+				</nav>
+			</div>
+
+		</div>
+		<!--end breadcrumb-->
+		<div class="row">
+			<div class="col-12">
+				<div class="card">
+					<div class="card-body">
+						<div class="row align-items-center">
+							<div class="col-lg-3 col-xl-2">
+								<a asp-page="./Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Créer</a>
+							</div>
+							<div class="col-lg-3 col-xl-2">
+								<a class="btn btn-secondary mb-3 mb-lg-0"><i class='bx bxs-book'></i>Catalogue produit</a>
+							</div>
+							<div class="col-lg-6 col-xl-8">
+								<form class="float-lg-end">
+									<div class="row row-cols-lg-2 row-cols-xl-auto g-2">
+										<div class="col">
+											<div class="position-relative">
+												<input type="text" class="form-control ps-5" placeholder="Rechercher une recette..."> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
+											</div>
+										</div>
+										<div class="col">
+											<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+												<button type="button" class="btn btn-white">Filtrer par</button>
+												<div class="btn-group" role="group">
+													<button id="btnGroupDrop1" type="button" class="btn btn-white dropdown-toggle dropdown-toggle-nocaret px-1" data-bs-toggle="dropdown" aria-expanded="false">
+														<i class='bx bx-chevron-down'></i>
+													</button>
+													<ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+														<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+														<li><a class="dropdown-item" href="#">Dropdown link</a></li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<h6 class="mb-0 text-uppercase">Liste des recettes de notre boulangerie</h6>
+		<hr />
+		<div class="card">
+			<div class="card-body">
+				<div class="table-responsive">
+					<table id="example" class="table table-striped table-bordered" style="width:100%">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>Nom</th>
+								<th>Nombre de parts</th>
+								<th>Prix de vente</th>
+								<th>Coût de revient au Kg</th>
+								<th>Date de création</th>
+								<th>Status</th>
+								<th>Action</th>
+							</tr>
+						</thead>
+						<tbody>
+							@if (Model.Recipes != null && Model.Recipes.Any())
+							{
+								@foreach (var recipe in Model.Recipes)
+								{
+									<tr>
+										<td>@recipe.Id</td>
+										<td>@recipe.Name</td>
+										<td>@recipe.NumberOfServings</td>
+										<td>@string.Format("{0:C}", recipe.SellingPrice)</td>
+										<td>@string.Format("{0:C}", recipe.CostPricePerKg)</td>
+										<td>@recipe.CreationDate</td>
+										<td>@recipe.Status</td>
+										<td>
+											<a asp-page="/DetailsRecipe" asp-route-id="@recipe.Id" class="btn btn-info">
+												<i class='bx bx-info-circle'></i>
+											</a>
+											<a asp-page="/EditRecipe" asp-route-id="@recipe.Id" class="btn btn-warning">
+												<i class='bx bx-edit'></i>
+											</a>
+											<a asp-page="/DeleteRecipe" asp-route-id="@recipe.Id" class="btn btn-danger">
+												<i class='bx bx-trash'></i>
+											</a>
+										</td>
+									</tr>
+								}
+							}
+							else
+							{
+								<tr>
+									<td colspan="8">
+										<div class="alert alert-warning" role="alert">
+											Aucune recette trouvée.
+										</div>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+<!--end page wrapper -->

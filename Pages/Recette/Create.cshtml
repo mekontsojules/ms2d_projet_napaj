@@ -1,0 +1,88 @@
+﻿@page
+@model Ms2dNapaj.Pages.Recette.CreateModel
+@{
+}
+@{
+    ViewData["Title"] = "Créer une nouvelle recette";
+}
+
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Recettes</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item">
+                            <a asp-page="./Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Création</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <h1>Créer une nouvelle recette</h1>
+
+        <form method="post">
+            <div class="row">
+                <div class="col-lg-6">
+                   
+
+                    <div class="form-group">
+                        <label> Nom de la recette </label>
+                        <input asp-for="Recipe.Name" class="form-control" />
+                        <span asp-validation-for="Recipe.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label > Nombre de parts : </label>
+                        <input asp-for="Recipe.NumberOfServings" class="form-control" />
+                        <span asp-validation-for="Recipe.NumberOfServings" class="text-danger"></span>
+                    </div>
+
+                    @* <div class="form-group">
+                        <label asp-for="Recipe.SellingPrice"></label>
+                        <input asp-for="Recipe.SellingPrice" class="form-control" />
+                        <span asp-validation-for="Recipe.SellingPrice" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Recipe.CostPricePerKg"></label>
+                        <input asp-for="Recipe.CostPricePerKg" class="form-control" />
+                        <span asp-validation-for="Recipe.CostPricePerKg" class="text-danger"></span>
+                    </div> *@
+
+                    <div class="form-group">
+                        <label > Allergènes</label>
+                        <input asp-for="Recipe.Allergens" class="form-control" />
+                        <span asp-validation-for="Recipe.Allergens" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Liste des ingredients</label>
+                        <select asp-for="Recipe.VariantOf" asp-items="ViewBag.Listrecettes" class="form-control">
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label asp-for="Recipe.Status"></label>
+                        <select asp-for="Recipe.Status" class="form-control">
+                            <option value="0">Archivé</option>
+                            <option value="1">Active</option>
+                        </select>
+                        <span asp-validation-for="Recipe.Status" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label> Variant de : </label>
+                        <select asp-for="Recipe.VariantOf" asp-items="ViewBag.Listrecettes" class="form-control">
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-5">Créer la recette</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

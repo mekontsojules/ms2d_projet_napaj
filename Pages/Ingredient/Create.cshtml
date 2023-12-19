@@ -1,0 +1,84 @@
+﻿@page
+@model Ms2dNapaj.Pages.Ingredient.CreateModel
+@{
+    ViewData["Title"] = "Créer un nouvel ingrédient";
+}
+
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Ingrédients</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item">
+                            <a asp-page="./Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Création</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+
+        <h1>Créer un nouvel ingrédient</h1>
+
+        <form method="post">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+                        <label asp-for="Ingredient.Name"></label>
+                        <input asp-for="Ingredient.Name" class="form-control" />
+                        <span asp-validation-for="Ingredient.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Ingredient.PurchasePrice"></label>
+                        <input asp-for="Ingredient.PurchasePrice" class="form-control" />
+                        <span asp-validation-for="Ingredient.PurchasePrice" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Ingredient.SupplierId"></label>
+                        <select asp-for="Ingredient.SupplierId" class="form-control">
+                            <option value="">Sélectionnez un fournisseur</option>
+                            @foreach (var supplier in Model.Suppliers)
+                            {
+                                <option value="@supplier.Id">@supplier.Name</option>
+                            }
+                        </select>
+                        <span asp-validation-for="Ingredient.SupplierId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Ingredient.CurrentStock"></label>
+                        <input asp-for="Ingredient.CurrentStock" class="form-control" />
+                        <span asp-validation-for="Ingredient.CurrentStock" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label >Allergenes</label>
+                        <select asp-for="Ingredient.AllergenId" class="form-control">
+                            @foreach (var aller in Model.Allergenes)
+                            {
+                                <option value="@aller.Id">@aller.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Ingredient.UnitedMesure"></label>
+                        <input asp-for="Ingredient.UnitedMesure" class="form-control" />
+                        <span asp-validation-for="Ingredient.UnitedMesure" class="text-danger"></span>
+                    </div> <div class="form-group">
+                        <label asp-for="Ingredient.MinimumStock"></label>
+                        <input asp-for="Ingredient.MinimumStock" class="form-control" />
+                        <span asp-validation-for="Ingredient.MinimumStock" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Créer l'ingrédient</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+

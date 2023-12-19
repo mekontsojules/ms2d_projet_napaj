@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Ms2dNapaj.DAL;
 
@@ -11,9 +12,11 @@ using Ms2dNapaj.DAL;
 namespace Ms2dNapaj.Migrations
 {
     [DbContext(typeof(NapajDBContext))]
-    partial class NapajDBContextModelSnapshot : ModelSnapshot
+    [Migration("20231219075847_UpdateRecipeVariantOfId")]
+    partial class UpdateRecipeVariantOfId
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

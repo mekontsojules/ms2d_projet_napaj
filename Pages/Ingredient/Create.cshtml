@@ -56,9 +56,13 @@
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="Ingredient.Allergens"></label>
-                        <input asp-for="Ingredient.Allergens" class="form-control" />
-                        <span asp-validation-for="Ingredient.Allergens" class="text-danger"></span>
+                        <label >Allergenes</label>
+                        <select asp-for="Ingredient.AllergenId" class="form-control">
+                            @foreach (var aller in Model.Allergenes)
+                            {
+                                <option value="@aller.Id">@aller.Name</option>
+                            }
+                        </select>
                     </div>
 
                     <div class="form-group">
@@ -70,7 +74,6 @@
                         <input asp-for="Ingredient.MinimumStock" class="form-control" />
                         <span asp-validation-for="Ingredient.MinimumStock" class="text-danger"></span>
                     </div>
-
 
                     <button type="submit" class="btn btn-primary">Créer l'ingrédient</button>
                 </div>

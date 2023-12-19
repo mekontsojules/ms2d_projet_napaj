@@ -33,7 +33,7 @@ namespace Ms2dNapaj.Pages.Ingredient
 		{
 			try
 			{
-				Ingredients = _context.Ingredients.Include(i=>i.Supplier).ToList();
+				Ingredients = _context.Ingredients.Include(i=>i.Supplier).Include(a=>a.Allergen).ToList();
 			}
 			catch (Exception ex)
 			{

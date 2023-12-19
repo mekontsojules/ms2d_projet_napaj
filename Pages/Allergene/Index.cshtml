@@ -1,7 +1,5 @@
 ﻿@page
-@model Ms2dNapaj.Pages.Recette.IndexModel
-@{
-}
+@model Ms2dNapaj.Pages.Allergene.IndexModel
 
 
 <!--start page wrapper -->
@@ -9,7 +7,7 @@
 	<div class="page-content">
 		<!--breadcrumb-->
 		<div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
-			<div class="breadcrumb-title pe-3">Recette</div>
+			<div class="breadcrumb-title pe-3">Allergens</div>
 			<div class="ps-3">
 				<nav aria-label="breadcrumb">
 					<ol class="breadcrumb mb-0 p-0">
@@ -29,17 +27,14 @@
 					<div class="card-body">
 						<div class="row align-items-center">
 							<div class="col-lg-3 col-xl-2">
-								<a asp-page="./Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Créer</a>
+								<a asp-page="./Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Nouvel Allergen</a>
 							</div>
-							<div class="col-lg-3 col-xl-2">
-								<a class="btn btn-secondary mb-3 mb-lg-0"><i class='bx bxs-book'></i>Catalogue produit</a>
-							</div>
-							<div class="col-lg-6 col-xl-8">
+							<div class="col-lg-9 col-xl-10">
 								<form class="float-lg-end">
 									<div class="row row-cols-lg-2 row-cols-xl-auto g-2">
 										<div class="col">
 											<div class="position-relative">
-												<input type="text" class="form-control ps-5" placeholder="Rechercher une recette..."> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
+												<input type="text" class="form-control ps-5" placeholder="Rechercher un Allergen..."> <span class="position-absolute top-50 product-show translate-middle-y"><i class="bx bx-search"></i></span>
 											</div>
 										</div>
 										<div class="col">
@@ -66,7 +61,7 @@
 			</div>
 		</div>
 
-		<h6 class="mb-0 text-uppercase">Liste des recettes de notre boulangerie</h6>
+		<h6 class="mb-0 text-uppercase">Liste des Allergens</h6>
 		<hr />
 		<div class="card">
 			<div class="card-body">
@@ -76,35 +71,25 @@
 							<tr>
 								<th>ID</th>
 								<th>Nom</th>
-								<th>Nombre de parts</th>
-								<th>Prix de vente</th>
-								<th>Coût de revient au Kg</th>
-								<th>Date de création</th>
-								<th>Status</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
-							@if (Model.Recipes != null && Model.Recipes.Any())
+							@if (Model.Allergen != null && Model.Allergen.Any())
 							{
-								@foreach (var recipe in Model.Recipes)
+								@foreach (var Allergen in Model.Allergen)
 								{
 									<tr>
-										<td>@recipe.Id</td>
-										<td>@recipe.Name</td>
-										<td>@recipe.NumberOfServings</td>
-										<td>@string.Format("{0:C}", recipe.SellingPrice)</td>
-										<td>@string.Format("{0:C}", recipe.CostPricePerKg)</td>
-										<td>@recipe.CreationDate</td>
-										<td>@recipe.Status</td>
+										<td>@Allergen.Id</td>
+										<td>@Allergen.Name</td>
 										<td>
-											<a asp-page="/DetailsRecipe" asp-route-id="@recipe.Id" class="btn btn-info">
+											<a asp-page="./Details" asp-route-id="@Allergen.Id" class="btn btn-info">
 												<i class='bx bx-info-circle'></i>
 											</a>
-											<a asp-page="/EditRecipe" asp-route-id="@recipe.Id" class="btn btn-warning">
+											<a asp-page="./Edit" asp-route-id="@Allergen.Id" class="btn btn-warning">
 												<i class='bx bx-edit'></i>
 											</a>
-											<a asp-page="/DeleteRecipe" asp-route-id="@recipe.Id" class="btn btn-danger">
+											<a asp-page="./Delete" asp-route-id="@Allergen.Id" class="btn btn-danger">
 												<i class='bx bx-trash'></i>
 											</a>
 										</td>
@@ -114,19 +99,21 @@
 							else
 							{
 								<tr>
-									<td colspan="8">
+									<td colspan="9">
 										<div class="alert alert-warning" role="alert">
-											Aucune recette trouvée.
+											Aucun élément trouvé.
 										</div>
 									</td>
 								</tr>
 							}
+
+
 						</tbody>
+
 					</table>
 				</div>
 			</div>
 		</div>
-
 
 	</div>
 </div>

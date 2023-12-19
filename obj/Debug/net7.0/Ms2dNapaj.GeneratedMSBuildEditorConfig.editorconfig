@@ -52,6 +52,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/code/napaj/Ms2dNapaj/Pages/Allergene/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZXJnZW5lXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/napaj/Ms2dNapaj/Pages/Allergene/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZXJnZW5lXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/napaj/Ms2dNapaj/Pages/Allergene/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZXJnZW5lXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/napaj/Ms2dNapaj/Pages/Allergene/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZXJnZW5lXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/napaj/Ms2dNapaj/Pages/Allergene/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWxsZXJnZW5lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/napaj/Ms2dNapaj/Pages/Catalogue/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0YWxvZ3VlXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

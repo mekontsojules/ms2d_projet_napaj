@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Ms2dNapaj.DAL;
+using Ms2dNapaj.Models;
 
 namespace Ms2dNapaj.Pages.Recette
 {
@@ -13,9 +15,17 @@ namespace Ms2dNapaj.Pages.Recette
 			_context = context;
 		}
 
-		public IActionResult OnGet()
+        [BindProperty]
+        public List<int> SelectedIngredients { get; set; }
+
+        public List<Models.Ingredient> ListIngredients { get; set; }=new List<Models.Ingredient>();
+		public List<Models.Recipe> Listrecettes { get; set; }=new List<Models.Recipe>();
+
+        public IActionResult OnGet()
 		{
-			return Page();
+			ListIngredients = _context.Ingredients.ToList();
+            ViewData["Listrecettes"] = new SelectList(_context.Recipes, "Id", "Name");
+            return Page();
 		}
 
 		[BindProperty]

@@ -27,15 +27,21 @@
         <form method="post">
             <div class="row">
                 <div class="col-lg-6">
-                    <!-- ... (autres champs du formulaire) ... -->
+                   
 
                     <div class="form-group">
-                        <label asp-for="Recipe.NumberOfServings"></label>
+                        <label> Nom de la recette </label>
+                        <input asp-for="Recipe.Name" class="form-control" />
+                        <span asp-validation-for="Recipe.Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label > Nombre de parts : </label>
                         <input asp-for="Recipe.NumberOfServings" class="form-control" />
                         <span asp-validation-for="Recipe.NumberOfServings" class="text-danger"></span>
                     </div>
 
-                    <div class="form-group">
+                    @* <div class="form-group">
                         <label asp-for="Recipe.SellingPrice"></label>
                         <input asp-for="Recipe.SellingPrice" class="form-control" />
                         <span asp-validation-for="Recipe.SellingPrice" class="text-danger"></span>
@@ -45,33 +51,36 @@
                         <label asp-for="Recipe.CostPricePerKg"></label>
                         <input asp-for="Recipe.CostPricePerKg" class="form-control" />
                         <span asp-validation-for="Recipe.CostPricePerKg" class="text-danger"></span>
-                    </div>
+                    </div> *@
 
                     <div class="form-group">
-                        <label asp-for="Recipe.Allergens"></label>
+                        <label > Allergènes</label>
                         <input asp-for="Recipe.Allergens" class="form-control" />
                         <span asp-validation-for="Recipe.Allergens" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
+                        <label> Liste des ingredients</label>
+                        <select asp-for="Recipe.VariantOf" asp-items="ViewBag.Listrecettes" class="form-control">
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
                         <label asp-for="Recipe.Status"></label>
                         <select asp-for="Recipe.Status" class="form-control">
-                            <option value="0">En cours</option>
-                            <option value="1">Terminée</option>
-                            <!-- Ajoutez d'autres options selon vos besoins -->
+                            <option value="0">Archivé</option>
+                            <option value="1">Active</option>
                         </select>
                         <span asp-validation-for="Recipe.Status" class="text-danger"></span>
                     </div>
 
                     <div class="form-group">
-                        <label asp-for="Recipe.VariantOf"></label>
-                        <!-- Ajoutez ici un champ pour la recette parente ou les variantes -->
-                        <span asp-validation-for="Recipe.VariantOf" class="text-danger"></span>
+                        <label> Variant de : </label>
+                        <select asp-for="Recipe.VariantOf" asp-items="ViewBag.Listrecettes" class="form-control">
+                        </select>
                     </div>
-                    
-                    <!-- ... (autres champs du formulaire) ... -->
 
-                    <button type="submit" class="btn btn-primary">Créer la recette</button>
+                    <button type="submit" class="btn btn-primary mt-5">Créer la recette</button>
                 </div>
             </div>
         </form>

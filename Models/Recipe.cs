@@ -11,6 +11,6 @@
         public DateTime CreationDate { get; set; }=DateTime.Now;
         public List<Allergen> Allergens { get; set; }
         public RecipeStatus Status { get; set; }
-        public Recipe VariantOf { get; set; }
+        public Recipe? VariantOf { get; set; }
     }
 }

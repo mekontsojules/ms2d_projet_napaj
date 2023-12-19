@@ -17,6 +17,7 @@ namespace Ms2dNapaj.Pages.Ingredient
         }
 
         public List<Ms2dNapaj.Models.Supplier> Suppliers { get; set; }
+        public List<Ms2dNapaj.Models.Allergen> Allergenes { get; set; }
 
         [BindProperty]
         public Models.Ingredient Ingredient { get; set; }
@@ -24,6 +25,7 @@ namespace Ms2dNapaj.Pages.Ingredient
         public IActionResult OnGet()
         {
             Suppliers = _context.Suppliers.ToList();
+            Allergenes=_context.Allergens.ToList();
             return Page();
         }
 

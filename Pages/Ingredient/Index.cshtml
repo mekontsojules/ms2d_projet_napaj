@@ -99,8 +99,16 @@
 										<td>@string.Format("{0:C}", ingredient.PurchasePrice)</td>
 										<td>@ingredient.Supplier.Name</td>
 										<td>@ingredient.ImportDate</td>
-										<td>@ingredient.CurrentStock @ingredient.UnitedMesure</td>
-										<td>@ingredient.Allergens</td>
+										@if (ingredient.CurrentStock <= ingredient.MinimumStock)
+										{
+											<td class="text-bg-danger">@ingredient.CurrentStock @ingredient.UnitedMesure</td>
+
+										}
+										else
+										{
+											<td>@ingredient.CurrentStock @ingredient.UnitedMesure</td>
+										}
+										<td>@ingredient.Allergen.Name</td>
 										<td>@ingredient.MinimumStock  @ingredient.UnitedMesure</td>
 										<td>
 											<a asp-page="/DetailsIngredient" asp-route-id="1" class="btn btn-info">

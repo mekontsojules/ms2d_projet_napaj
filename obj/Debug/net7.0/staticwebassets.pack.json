@@ -3585,6 +3585,18 @@
       "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212150550.xlsx"
     },
     {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231212152049.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231212152049.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231215094241.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231215094241.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231215094302.xlsx",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231215094302.xlsx"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ms2dNapaj.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

@@ -5,6 +5,46 @@
       "PackagePath": "staticwebassets\\Ms2dNapaj.bundle.scp.css"
     },
     {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220213546.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220213546.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220213735.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220213735.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220214025.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220214025.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220214237.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220214237.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220214354.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220214354.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220214517.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220214517.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220214629.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220214629.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\_20231220213252.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\_20231220213252.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\_20231220213427.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\_20231220213427.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\list_achat_20231220212959.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\list_achat_20231220212959.pdf"
+    },
+    {
       "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\FontAwesome\\css\\all.css",
       "PackagePath": "staticwebassets\\FontAwesome\\css\\all.css"
     },
@@ -3595,6 +3635,18 @@
     {
       "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231215094302.xlsx",
       "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231215094302.xlsx"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231219101118.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231219101118.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231220214845.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231220214845.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231220215009.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231220215009.pdf"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ms2dNapaj.Microsoft.AspNetCore.StaticWebAssets.props",

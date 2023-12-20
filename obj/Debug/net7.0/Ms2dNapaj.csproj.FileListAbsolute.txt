@@ -10,6 +10,10 @@ C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Azure.Core.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Azure.Identity.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Azure.Security.KeyVault.Certificates.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Azure.Security.KeyVault.Secrets.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\DinkToPdf.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\EPPlus.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\EPPlus.Interfaces.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\EPPlus.System.Drawing.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Humanizer.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.OpenIdConnect.dll
@@ -66,6 +70,7 @@ C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.IdentityModel.Validators.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.NET.StringTools.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.VisualStudio.Web.CodeGeneration.dll
@@ -249,6 +254,8 @@ C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
 C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
@@ -278,10 +285,3 @@ C:\code\napaj\Ms2dNapaj\obj\Debug\net7.0\refint\Ms2dNapaj.dll
 C:\code\napaj\Ms2dNapaj\obj\Debug\net7.0\Ms2dNapaj.pdb
 C:\code\napaj\Ms2dNapaj\obj\Debug\net7.0\Ms2dNapaj.genruntimeconfig.cache
 C:\code\napaj\Ms2dNapaj\obj\Debug\net7.0\ref\Ms2dNapaj.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\EPPlus.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\EPPlus.Interfaces.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\EPPlus.System.Drawing.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
-C:\code\napaj\Ms2dNapaj\bin\Debug\net7.0\DinkToPdf.dll

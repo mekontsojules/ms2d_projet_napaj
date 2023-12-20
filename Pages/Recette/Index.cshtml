@@ -32,7 +32,7 @@
 								<a asp-page="./Create" class="btn btn-primary mb-3 mb-lg-0"><i class='bx bxs-plus-square'></i>Créer</a>
 							</div>
 							<div class="col-lg-3 col-xl-2">
-								<a class="btn btn-secondary mb-3 mb-lg-0"><i class='bx bxs-book'></i>Catalogue produit</a>
+								<a asp-page-handler="GenerateCataloguePDF" class="btn btn-secondary mb-3 mb-lg-0"><i class='bx bxs-book'></i>Catalogue produit</a>
 							</div>
 							<div class="col-lg-6 col-xl-8">
 								<form class="float-lg-end">
@@ -79,8 +79,8 @@
 								<th>Nombre de parts</th>
 								<th>Prix de vente</th>
 								<th>Coût de revient au Kg</th>
-								<th>Date de création</th>
-								<th>Status</th>
+								<th>Allergenes</th>
+								<th>Composition</th>
 								<th>Action</th>
 							</tr>
 						</thead>
@@ -95,8 +95,31 @@
 										<td>@recipe.NumberOfServings</td>
 										<td>@string.Format("{0:C}", recipe.SellingPrice)</td>
 										<td>@string.Format("{0:C}", recipe.CostPricePerKg)</td>
-										<td>@recipe.CreationDate</td>
-										<td>@recipe.Status</td>
+										<td>
+											<ul>
+												@foreach (var aller in recipe.Allergens)
+												{
+													<li>
+														<span>@aller.Name</span>
+													</li>
+												}
+											</ul>
+
+										</td>
+										<td>
+											<ul>
+												@foreach (var ingredient in recipe.Ingredients)
+												{
+													<li>
+														<span>@ingredient.Ingredient.Name =></span>
+														<span>@ingredient.Quantity</span>
+														<span>@ingredient.unite</span>
+													</li>
+													
+												}
+											</ul>
+											
+										</td>
 										<td>
 											<a asp-page="/DetailsRecipe" asp-route-id="@recipe.Id" class="btn btn-info">
 												<i class='bx bx-info-circle'></i>

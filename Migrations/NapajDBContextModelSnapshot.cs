@@ -318,6 +318,10 @@ namespace Ms2dNapaj.Migrations
                     b.Property<int>("RecipeId")
                         .HasColumnType("int");
 
+                    b.Property<string>("unite")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("IngredientId");

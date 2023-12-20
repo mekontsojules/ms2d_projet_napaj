@@ -142,22 +142,35 @@ namespace Ms2dNapaj.Pages.Ingredient
 		{
 			var htmlContent = new StringBuilder();
 
-			htmlContent.AppendLine("<html><body>");
-			htmlContent.AppendLine("<h1>Liste d'achat d'ingredients pour la patisserie NAPAJ</h1>");
+			htmlContent.AppendLine("<html><head>");
+			htmlContent.AppendLine("<meta charset='utf-8'>");
+			htmlContent.AppendLine("<style>");
+			htmlContent.AppendLine("table { width: 100%; border-collapse: collapse; margin-top: 15px; }");
+			htmlContent.AppendLine("table, th, td { border: 1px solid #dee2e6; }");
+			htmlContent.AppendLine("th, td { padding: 10px; text-align: left; }");
+			htmlContent.AppendLine("thead { background-color: #343a40; color: #fff; }");
+			htmlContent.AppendLine("</style>");
+			htmlContent.AppendLine("</head><body>");
+			htmlContent.AppendLine("<div class='container mt-5'>");
+			htmlContent.AppendLine("<h1 class='mb-4'>Liste d'achat d'ingrédients pour la patisserie NAPAJ</h1>");
 
 			// Vérifie s'il y a des ingrédients à acheter
 			if (ingredients.Any())
 			{
-				// Crée une table HTML
-				htmlContent.AppendLine("<table border='1'>");
+				// Crée une table avec une classe personnalisée pour appliquer le style
+				htmlContent.AppendLine("<div class='table-responsive'>");
+				htmlContent.AppendLine("<table class='custom-table'>");
 
 				// Ajoute l'en-tête de la table
+				htmlContent.AppendLine("<thead>");
 				htmlContent.AppendLine("<tr>");
-				htmlContent.AppendLine("<th>Nom de l'ingredient</th>");
-				htmlContent.AppendLine("<th>Quantite a acheter</th>");
+				htmlContent.AppendLine("<th scope='col'>Nom de l'ingrédient</th>");
+				htmlContent.AppendLine("<th scope='col'>Quantité à acheter</th>");
 				htmlContent.AppendLine("</tr>");
+				htmlContent.AppendLine("</thead>");
 
 				// Ajoute les lignes de données
+				htmlContent.AppendLine("<tbody>");
 				foreach (var ingredient in ingredients)
 				{
 					htmlContent.AppendLine("<tr>");
@@ -165,17 +178,19 @@ namespace Ms2dNapaj.Pages.Ingredient
 					htmlContent.AppendLine($"<td>{ingredient.MinimumStock * 3}</td>");
 					htmlContent.AppendLine("</tr>");
 				}
+				htmlContent.AppendLine("</tbody>");
 
-				// Termine la table HTML
+				// Termine la table
 				htmlContent.AppendLine("</table>");
+				htmlContent.AppendLine("</div>");
 			}
 			else
 			{
-				htmlContent.AppendLine("<p>Aucun ingrédient à acheter pour le moment.</p>");
+				htmlContent.AppendLine("<p class='mt-4'>Aucun ingrédient à acheter pour le moment.</p>");
 			}
 
 			// Termine le document HTML
-			htmlContent.AppendLine("</body></html>");
+			htmlContent.AppendLine("</div></body></html>");
 
 			return htmlContent.ToString();
 		}

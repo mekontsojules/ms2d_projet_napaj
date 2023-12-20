@@ -23,11 +23,11 @@
         </div>
 
         <h1>Créer une nouvelle recette</h1>
+        <select id="ListIngredient" hidden asp-items="ViewBag.ListIngredient"></select>
 
         <form method="post">
             <div class="row">
-                <div class="col-lg-6">
-                   
+                <div class="col-md-5">
 
                     <div class="form-group">
                         <label> Nom de la recette </label>
@@ -35,54 +35,179 @@
                         <span asp-validation-for="Recipe.Name" class="text-danger"></span>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group mb-3">
                         <label > Nombre de parts : </label>
                         <input asp-for="Recipe.NumberOfServings" class="form-control" />
                         <span asp-validation-for="Recipe.NumberOfServings" class="text-danger"></span>
                     </div>
 
-                    @* <div class="form-group">
-                        <label asp-for="Recipe.SellingPrice"></label>
-                        <input asp-for="Recipe.SellingPrice" class="form-control" />
-                        <span asp-validation-for="Recipe.SellingPrice" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="Recipe.CostPricePerKg"></label>
-                        <input asp-for="Recipe.CostPricePerKg" class="form-control" />
-                        <span asp-validation-for="Recipe.CostPricePerKg" class="text-danger"></span>
-                    </div> *@
-
-                    <div class="form-group">
-                        <label > Allergènes</label>
-                        <input asp-for="Recipe.Allergens" class="form-control" />
-                        <span asp-validation-for="Recipe.Allergens" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label> Liste des ingredients</label>
-                        <select asp-for="Recipe.VariantOf" asp-items="ViewBag.Listrecettes" class="form-control">
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label asp-for="Recipe.Status"></label>
-                        <select asp-for="Recipe.Status" class="form-control">
-                            <option value="0">Archivé</option>
-                            <option value="1">Active</option>
-                        </select>
-                        <span asp-validation-for="Recipe.Status" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label> Variant de : </label>
-                        <select asp-for="Recipe.VariantOf" asp-items="ViewBag.Listrecettes" class="form-control">
-                        </select>
+                <table class="table col-md-5 mt-5 mb-5">
+                    <h4>Composition de la recette</h4>
+                    <thead>
+                        <tr>
+                            <th scope="col">Ingredient</th>
+                            <th scope="col">Quantité</th>
+                            <th scope="col">Unité</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                        <tbody id="ingredientsTableBody">
+                          
+                        </tbody>
+                </table>
+                    <div class="text-center">
+                        <button type="button" class="btn btn-warning btn-sm text-center" onclick="ajouterIngredient()">Ajouter un ingredient</button>
                     </div>
 
                     <button type="submit" class="btn btn-primary mt-5">Créer la recette</button>
                 </div>
             </div>
         </form>
+       
     </div>
 </div>
+
+@* 
+<script>
+    function ajouterIngredient() {
+        // Récupérez l'élément tbody
+        var tbody = document.getElementById("ingredientsTableBody");
+
+        // Créez une nouvelle ligne avec un sélecteur rempli d'options
+        var nouvelleLigne = document.createElement("tr");
+
+        // Créez le sélecteur
+        var select = document.createElement("select");
+        select.className = "form-control form-select";
+        select.name = "SelectedIngredients.Keys";
+
+        // Remplissez le sélecteur avec les options de la liste d'ingrédients
+        var listIngredientOptions = document.getElementById("ListIngredient").options;
+        for (var i = 0; i < listIngredientOptions.length; i++) {
+            var option = document.createElement("option");
+            option.value = listIngredientOptions[i].value;
+            option.text = listIngredientOptions[i].text;
+            select.appendChild(option);
+        }
+
+        // Ajoutez le sélecteur à la nouvelle ligne
+        var cell1 = document.createElement("td");
+        cell1.appendChild(select);
+        nouvelleLigne.appendChild(cell1);
+
+        // Ajoutez les autres cellules
+        nouvelleLigne.innerHTML += '<td><input class="form-control" type="number" name="SelectedIngredients.Values" placeholder="quantité" /></td>' +
+            '<td><input class="form-control" value="g" type="text" readonly /></td>' +
+            '<td><i class="bx bx-trash btn btn-danger" onclick="supprimerIngredient(this)"></i></td>';
+
+        // Ajoutez la nouvelle ligne au tableau
+        tbody.appendChild(nouvelleLigne);
+    }
+
+    function supprimerIngredient(icon) {
+        // Récupérez l'élément tr parent (la ligne)
+        var ligne = icon.closest("tr");
+
+        // Supprimez la ligne du tableau
+        ligne.remove();
+    }
+</script>
+ *@
+
+@* 
+<script>
+    function ajouterIngredient() {
+        // Récupérez l'élément tbody
+        var tbody = document.getElementById("ingredientsTableBody");
+
+        // Créez une nouvelle ligne avec un sélecteur rempli d'options
+        var nouvelleLigne = document.createElement("tr");
+
+        // Créez le sélecteur
+        var select = document.createElement("select");
+        select.className = "form-control form-select";
+        select.name = "SelectedIngredients[" + (tbody.children.length - 1) + "].IngredientId";
+
+        // Remplissez le sélecteur avec les options de la liste d'ingrédients
+        var listIngredientOptions = document.getElementById("ListIngredient").options;
+        for (var i = 0; i < listIngredientOptions.length; i++) {
+            var option = document.createElement("option");
+            option.value = listIngredientOptions[i].value;
+            option.text = listIngredientOptions[i].text;
+            select.appendChild(option);
+        }
+
+        // Ajoutez le sélecteur à la nouvelle ligne
+        var cell1 = document.createElement("td");
+        cell1.appendChild(select);
+        nouvelleLigne.appendChild(cell1);
+
+        // Ajoutez les autres cellules
+        nouvelleLigne.innerHTML += '<td><input class="form-control" type="number" name="SelectedIngredients[' + (tbody.children.length - 1) + '].Quantity" placeholder="quantité" /></td>' +
+            '<td><input class="form-control" value="g" type="text" readonly /></td>' +
+            '<td><i class="bx bx-trash btn btn-danger" onclick="supprimerIngredient(this)"></i></td>';
+
+        // Ajoutez la nouvelle ligne au tableau
+        tbody.appendChild(nouvelleLigne);
+    }
+
+    function supprimerIngredient(icon) {
+        // Récupérez l'élément tr parent (la ligne)
+        var ligne = icon.closest("tr");
+
+        // Supprimez la ligne du tableau
+        ligne.remove();
+    }
+</script>
+ *@
+
+
+
+<script>
+    let index = 0; // Ajoutez une variable pour suivre l'index
+
+    function ajouterIngredient() {
+        // Récupérez l'élément tbody
+        var tbody = document.getElementById("ingredientsTableBody");
+
+        // Créez une nouvelle ligne avec un sélecteur rempli d'options
+        var nouvelleLigne = document.createElement("tr");
+
+        // Créez le sélecteur
+        var select = document.createElement("select");
+        select.className = "form-control form-select";
+        select.name = "SelectedIngredients[" + index + "].IngredientId";
+
+        // Remplissez le sélecteur avec les options de la liste d'ingrédients
+        var listIngredientOptions = document.getElementById("ListIngredient").options;
+        for (var i = 0; i < listIngredientOptions.length; i++) {
+            var option = document.createElement("option");
+            option.value = listIngredientOptions[i].value;
+            option.text = listIngredientOptions[i].text;
+            select.appendChild(option);
+        }
+
+        // Ajoutez le sélecteur à la nouvelle ligne
+        var cell1 = document.createElement("td");
+        cell1.appendChild(select);
+        nouvelleLigne.appendChild(cell1);
+
+        // Ajoutez les autres cellules
+        nouvelleLigne.innerHTML += '<td><input class="form-control" type="number" name="SelectedIngredients[' + index + '].Quantity" placeholder="quantité" /></td>' +
+            '<td><input class="form-control" value="g" type="text" readonly /></td>' +
+            '<td><i class="bx bx-trash btn btn-danger" onclick="supprimerIngredient(this)"></i></td>';
+
+        // Ajoutez la nouvelle ligne au tableau
+        tbody.appendChild(nouvelleLigne);
+
+        index++; // Incrémente l'index pour la prochaine ligne
+    }
+
+    function supprimerIngredient(icon) {
+        // Récupérez l'élément tr parent (la ligne)
+        var ligne = icon.closest("tr");
+
+        // Supprimez la ligne du tableau
+        ligne.remove();
+    }
+</script>

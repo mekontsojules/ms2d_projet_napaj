@@ -14,6 +14,9 @@
 	<link href="~/assets/plugins/simplebar/css/simplebar.css" rel="stylesheet" />
 	<link href="~/assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet" />
 	<link href="~/assets/plugins/metismenu/css/metisMenu.min.css" rel="stylesheet" />
+	<!--plugins-->
+	<link href="~/assets/plugins/fancy-file-uploader/fancy_fileupload.css" rel="stylesheet" />
+	<link href="~/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.css" rel="stylesheet" />
 	<!-- loader-->
 	<link href="~/assets/css/pace.min.css" rel="stylesheet" />
 	<script src="~/assets/js/pace.min.js"></script>
@@ -537,10 +540,33 @@
 	<script src="~/assets/plugins/simplebar/js/simplebar.min.js"></script>
 	<script src="~/assets/plugins/metismenu/js/metisMenu.min.js"></script>
 	<script src="~/assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
+
+	@* <script src="~/assets/plugins/fancy-file-uploader/jquery.ui.widget.js"></script>
+	<script src="~/assets/plugins/fancy-file-uploader/jquery.fileupload.js"></script>
+	<script src="~/assets/plugins/fancy-file-uploader/jquery.iframe-transport.js"></script>
+	<script src="~/assets/plugins/fancy-file-uploader/jquery.fancy-fileupload.js"></script>
+	<script src="~/assets/plugins/Drag-And-Drop/dist/imageuploadify.min.js"></script> *@
+
 	<script src="~/assets/plugins/vectormap/jquery-jvectormap-2.0.2.min.js"></script>
 	<script src="~/assets/plugins/vectormap/jquery-jvectormap-world-mill-en.js"></script>
 	<script src="~/assets/plugins/chartjs/js/chart.js"></script>
 	<script src="~/assets/js/index.js"></script>
+	<script>
+		$('#fancy-file-upload').FancyFileUpload({
+			params: {
+				action: '/Ingredient/Import',
+			},
+			maxfilesize: 1000000,
+			uploadtype: 'POST',  // Utilisez la méthode POST pour l'envoi
+			addMore: true,       // Ajoutez ceci si vous souhaitez permettre l'ajout de plusieurs fichiers
+			onsubmit: function (file, data) {
+				
+			}
+		});
+
+	</script>
+
+
 	<!--app JS-->
 	<script src="~/assets/js/app.js"></script>
 	<script>

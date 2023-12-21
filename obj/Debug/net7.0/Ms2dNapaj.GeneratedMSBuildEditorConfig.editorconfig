@@ -92,6 +92,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5ncmVkaWVudFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/code/napaj/Ms2dNapaj/Pages/Ingredient/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5ncmVkaWVudFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/napaj/Ms2dNapaj/Pages/Ingredient/Import.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5ncmVkaWVudFxJbXBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/napaj/Ms2dNapaj/Pages/Ingredient/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5ncmVkaWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -118,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/code/napaj/Ms2dNapaj/Pages/Supplier/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwcGxpZXJcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/code/napaj/Ms2dNapaj/Pages/Supplier/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3VwcGxpZXJcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/code/napaj/Ms2dNapaj/Pages/Supplier/Index.cshtml]

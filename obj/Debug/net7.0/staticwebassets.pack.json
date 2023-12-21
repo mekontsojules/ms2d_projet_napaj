@@ -3649,6 +3649,10 @@
       "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231220215009.pdf"
     },
     {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231221104644.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231221104644.pdf"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ms2dNapaj.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

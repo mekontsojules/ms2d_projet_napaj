@@ -1,4 +1,5 @@
 ﻿@page
+@using Ms2dNapaj.Models;
 @model Ms2dNapaj.Pages.Ingredient.IndexModel
 @{
 
@@ -68,7 +69,14 @@
 				</div>
 			</div>
 		</div>
+		@if (@datastatique.ismessage)
+		{
 
+			<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				<strong> <span class="btn btn-warning"><i class="bx bx-exclamation"></i> </span> warring!</strong> @datastatique.message
+				<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+			</div>
+		}
 		<h6 class="mb-0 text-uppercase">Liste des Ingredients</h6>
 		<hr />
 		<div class="card">
@@ -108,16 +116,14 @@
 										{
 											<td>@ingredient.CurrentStock @ingredient.UnitedMesure</td>
 										}
-										<td>@ingredient.Allergen.Name</td>
+										<td> @if(ingredient.Allergen==null) { <span> aucun</span> }else{@ingredient.Allergen.Name}</td>
 										<td>@ingredient.MinimumStock  @ingredient.UnitedMesure</td>
 										<td>
-											<a asp-page="/DetailsIngredient" asp-route-id="1" class="btn btn-info">
-												<i class='bx bx-info-circle'></i>
-											</a>
-											<a asp-page="/EditIngredient" asp-route-id="1" class="btn btn-warning">
+
+											<a asp-page="./Edit" asp-route-id="@ingredient.Id" class="btn btn-warning">
 												<i class='bx bx-edit'></i>
 											</a>
-											<a asp-page="/DeleteIngredient" asp-route-id="1" class="btn btn-danger">
+											<a asp-page-handler="DeleteIngredient" asp-route-id="@ingredient.Id" class="btn btn-danger">
 												<i class='bx bx-trash'></i>
 											</a>
 										</td>

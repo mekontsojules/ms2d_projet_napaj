@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "JZgx6VW5sxvFIdHBRqXAk0Dh+G3y02JTRZCshLtZhEw=",
+  "Hash": "JPEQ1rfZCtoWbtogbpg9/Brk7cQDw5K8V9lwoaLQinc=",
   "Source": "Ms2dNapaj",
   "BasePath": "_content/Ms2dNapaj",
   "Mode": "Default",
@@ -13753,6 +13753,23 @@
       "OriginalItemSpec": "wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231220214629.pdf"
     },
     {
+      "Identity": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231221150230.pdf",
+      "SourceId": "Ms2dNapaj",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\",
+      "BasePath": "_content/Ms2dNapaj",
+      "RelativePath": "Catalogue_Produit/Catalogue_Produit_20231221150230.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231221150230.pdf"
+    },
+    {
       "Identity": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\list_achat_20231220212959.pdf",
       "SourceId": "Ms2dNapaj",
       "SourceType": "Discovered",
@@ -15553,6 +15570,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\shopping_lists\\list_achat_20231221104644.pdf"
+    },
+    {
+      "Identity": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231221150217.pdf",
+      "SourceId": "Ms2dNapaj",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\",
+      "BasePath": "_content/Ms2dNapaj",
+      "RelativePath": "shopping_lists/list_achat_20231221150217.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\shopping_lists\\list_achat_20231221150217.pdf"
     },
     {
       "Identity": "C:\\Users\\jrsme\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.13\\staticwebassets\\V5\\css\\site.css",

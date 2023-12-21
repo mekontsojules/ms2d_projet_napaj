@@ -61,6 +61,25 @@ namespace Ms2dNapaj.Pages.Recette
 		}
 
 
+		public async Task<IActionResult> OnGetDeleteRecipe(int id)
+		{
+			try
+			{
+				var recette = _context.Recipes.Where(i => i.Id == id).FirstOrDefault();
+
+				/// suppressions de la composition
+				/// 
+				var sup= _context.IngredientQuantities.Where(i=>i.RecipeId == id).ToList();
+				_context.IngredientQuantities.RemoveRange(sup);
+				_context.Recipes.Remove(recette);
+				await _context.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+			}
+			return RedirectToPage("./Index");
+		}
+
 		public IActionResult OnGetGenerateCataloguePDF()
 		{
 			// Sélection des ingrédients dans la base de données

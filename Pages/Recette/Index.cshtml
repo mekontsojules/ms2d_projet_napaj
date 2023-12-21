@@ -127,7 +127,7 @@
 											<a asp-page="/EditRecipe" asp-route-id="@recipe.Id" class="btn btn-warning">
 												<i class='bx bx-edit'></i>
 											</a>
-											<a asp-page="/DeleteRecipe" asp-route-id="@recipe.Id" class="btn btn-danger">
+											<a asp-page-handler="DeleteRecipe" asp-route-id="@recipe.Id" class="btn btn-danger">
 												<i class='bx bx-trash'></i>
 											</a>
 											<a asp-page-handler="ArchiveRecipe" asp-route-id="@recipe.Id" class="btn btn-secondary">

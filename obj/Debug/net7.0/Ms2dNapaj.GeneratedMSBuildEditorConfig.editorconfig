@@ -112,6 +112,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXR0ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/code/napaj/Ms2dNapaj/Pages/Recette/EditRecipe.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXR0ZVxFZGl0UmVjaXBlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/code/napaj/Ms2dNapaj/Pages/Recette/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVjZXR0ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

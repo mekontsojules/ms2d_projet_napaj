@@ -30,11 +30,22 @@ namespace Ms2dNapaj.Pages
         public string moyenne { get; set; }
         public void OnGet()
         {
-            ingredients=_dbContext.Ingredients.ToList();
-            NombreIngredient = _dbContext.Ingredients.Count();
-            NombreRecette = _dbContext.Recipes.Count();
-            nombreAllergen = _dbContext.Allergens.Count();
-            moyenne=_dbContext.Recipes.Average(r=>r.SellingPrice).ToString();
+
+            try
+            {
+                ingredients = _dbContext.Ingredients.ToList();
+                NombreIngredient = _dbContext.Ingredients.Count();
+                NombreRecette = _dbContext.Recipes.Count();
+                nombreAllergen = _dbContext.Allergens.Count();
+                moyenne = _dbContext.Recipes.Average(r => r.SellingPrice).ToString();
+            }catch(Exception ex)
+            {
+                NombreIngredient = 0;
+                NombreRecette = 0;
+                nombreAllergen = 0;
+                moyenne = "0";
+            }
+         
 
         }
     }

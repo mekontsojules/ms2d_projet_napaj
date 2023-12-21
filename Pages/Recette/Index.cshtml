@@ -121,10 +121,7 @@
 											
 										</td>
 										<td>
-											<a asp-page="/DetailsRecipe" asp-route-id="@recipe.Id" class="btn btn-info">
-												<i class='bx bx-info-circle'></i>
-											</a>
-											<a asp-page="/EditRecipe" asp-route-id="@recipe.Id" class="btn btn-warning">
+											<a asp-page="./EditRecipe" asp-route-id="@recipe.Id" class="btn btn-warning">
 												<i class='bx bx-edit'></i>
 											</a>
 											<a asp-page-handler="DeleteRecipe" asp-route-id="@recipe.Id" class="btn btn-danger">

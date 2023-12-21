@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Ms2dNapaj.DAL;
+using Ms2dNapaj.Models;
 using System.Globalization;
 using System.Text;
 
@@ -23,16 +24,34 @@ namespace Ms2dNapaj.Pages.Recette
 			_pdfConverter = pdfConverter;
 		}
 		public List<Ms2dNapaj.Models.Recipe> Recipes { get; set; }
+		public List<Ms2dNapaj.Models.Recipe> RecipesArchived { get; set; }
 		public string ErrorMessage { get; set; }
 		public void OnGet()
         {
 			try
 			{
 				Recipes = _context.Recipes
+					.Where(a => a.Status == RecipeStatus.Active)
+					.Include(r => r.Ingredients)
+						.ThenInclude(iq => iq.Ingredient)
+							.ThenInclude(ii=>ii.Allergen)
+					.Include(r => r.Allergens).ToList();
+
+				RecipesArchived = _context.Recipes
+					.Where(a=>a.Status == RecipeStatus.Archived)
 					.Include(r => r.Ingredients)
 						.ThenInclude(iq => iq.Ingredient)
 					.Include(r => r.Allergens).ToList();
-                
+                //recherche des allergenes de la recette
+             
+                for (int i = 0; i < Recipes.Count; i++)
+                {
+                    for (int j = 0; j < Recipes[i].Ingredients.Count; j++)
+                    {
+                    Recipes[i].Allergens.Add(Recipes[i].Ingredients[j].Ingredient.Allergen);
+
+					}
+				}
             }
 			catch (Exception ex)
 			{
@@ -41,6 +60,25 @@ namespace Ms2dNapaj.Pages.Recette
 			}
 		}
 
+
+		public async Task<IActionResult> OnGetDeleteRecipe(int id)
+		{
+			try
+			{
+				var recette = _context.Recipes.Where(i => i.Id == id).FirstOrDefault();
+
+				/// suppressions de la composition
+				/// 
+				var sup= _context.IngredientQuantities.Where(i=>i.RecipeId == id).ToList();
+				_context.IngredientQuantities.RemoveRange(sup);
+				_context.Recipes.Remove(recette);
+				await _context.SaveChangesAsync();
+			}
+			catch (Exception ex)
+			{
+			}
+			return RedirectToPage("./Index");
+		}
 
 		public IActionResult OnGetGenerateCataloguePDF()
 		{
@@ -141,5 +179,32 @@ namespace Ms2dNapaj.Pages.Recette
 
 			return htmlContent.ToString();
 		}
-	}
+
+        public async Task<IActionResult> OnGetArchiveRecipeAsync(int id)
+        {
+            var recipeToArchive = await _context.Recipes.FindAsync(id);
+
+            if (recipeToArchive != null)
+            {
+                // Archiver la recette (par exemple, en définissant un indicateur d'archivage)
+                recipeToArchive.Status = RecipeStatus.Archived;
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
+        public async Task<IActionResult> OnGetDeArchiveRecipeAsync(int id)
+        {
+            var recipeToArchive = await _context.Recipes.FindAsync(id);
+
+            if (recipeToArchive != null)
+            {
+                // Archiver la recette (par exemple, en définissant un indicateur d'archivage)
+                recipeToArchive.Status = RecipeStatus.Active;
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToPage("./Index");
+        }
+    }
 }

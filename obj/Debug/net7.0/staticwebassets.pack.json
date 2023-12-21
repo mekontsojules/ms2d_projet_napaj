@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231220214629.pdf"
     },
     {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\Catalogue_Produit_20231221150230.pdf",
+      "PackagePath": "staticwebassets\\Catalogue_Produit\\Catalogue_Produit_20231221150230.pdf"
+    },
+    {
       "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\Catalogue_Produit\\_20231220213252.pdf",
       "PackagePath": "staticwebassets\\Catalogue_Produit\\_20231220213252.pdf"
     },
@@ -3651,6 +3655,10 @@
     {
       "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231221104644.pdf",
       "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231221104644.pdf"
+    },
+    {
+      "Id": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231221150217.pdf",
+      "PackagePath": "staticwebassets\\shopping_lists\\list_achat_20231221150217.pdf"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Ms2dNapaj.Microsoft.AspNetCore.StaticWebAssets.props",

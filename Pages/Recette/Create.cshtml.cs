@@ -40,7 +40,7 @@ namespace Ms2dNapaj.Pages.Recette
             decimal costPrice = CalculateCostPrice(); // Implémentez cette fonction pour calculer le coût de revient
 
             // 2. Calcul du prix de vente (avec une marge de 70%)
-            decimal sellingPrice = costPrice * (decimal)4.0; // 70% de marge, ajustez selon vos besoins
+            decimal sellingPrice = costPrice * (decimal)4.0; // 75% de marge, ajustez selon vos besoins
 
             // 3. Affectation des valeurs calculées à la recette
             Recipe.CostPricePerKg = costPrice;
@@ -85,7 +85,7 @@ namespace Ms2dNapaj.Pages.Recette
                 var ingredientData = _context.Ingredients.Find(ingredient.IngredientId);
 
                 // Ajoutez le coût de cet ingrédient à la somme totale
-                totalCost += ingredientData.PurchasePrice * ingredient.Quantity;
+                totalCost += (ingredientData.PurchasePrice/1000) * ingredient.Quantity;
             }
 
             return totalCost;

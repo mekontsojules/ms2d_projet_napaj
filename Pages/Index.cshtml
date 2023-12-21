@@ -14,7 +14,7 @@
 						<div class="d-flex align-items-center">
 							<div>
 								<p class="mb-0 text-secondary">Total d'Ingrédients </p>
-								<h4 class="my-1 text-info">100 000</h4>
+								<h4 class="my-1 text-info">@Model.NombreIngredient</h4>
 								<p class="mb-0 font-13">+2.5% que la semaine passées</p>
 							</div>
 							<div class="widgets-icons-2 rounded-circle bg-gradient-blues text-white ms-auto">
@@ -30,7 +30,7 @@
 						<div class="d-flex align-items-center">
 							<div>
 								<p class="mb-0 text-secondary"> Recettes Répertoriées</p>
-								<h4 class="my-1 text-danger">50</h4>
+								<h4 class="my-1 text-danger">@Model.NombreRecette</h4>
 								<p class="mb-0 font-13">50 recettes uniques à découvrir </p>
 							</div>
 							<div class="widgets-icons-2 rounded-circle bg-gradient-burning text-white ms-auto">
@@ -46,7 +46,7 @@
 						<div class="d-flex align-items-center">
 							<div>
 								<p class="mb-0 text-secondary">Allergènes les Plus Courants</p>
-								<h4 class="my-1 text-success">5</h4>
+								<h4 class="my-1 text-success">@Model.nombreAllergen</h4>
 								<p class="mb-0 font-13">Top 5 des allergènes référencés</p>
 							</div>
 							<div class="widgets-icons-2 rounded-circle bg-gradient-ohhappiness text-white ms-auto">
@@ -61,8 +61,8 @@
 					<div class="card-body">
 						<div class="d-flex align-items-center">
 							<div>
-								<p class="mb-0 text-secondary">Coûts des Ingrédients</p>
-								<h4 class="my-1 text-warning">8.4K</h4>
+								<p class="mb-0 text-secondary">Coûts moyen par recette</p>
+								<h4 class="my-1 text-warning">@Model.moyenne</h4>
 								<p class="mb-0 font-13">+5% ce trimestre</p>
 							</div>
 							<div class="widgets-icons-2 rounded-circle bg-gradient-orange text-white ms-auto">
@@ -130,7 +130,27 @@
 
 				<div class="col-12 col-lg-7 col-xl-7">
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">
+
+					@if(Model.ingredients!=null || Model.ingredients.Count != 0)
+					{
+						@foreach(var item in Model.ingredients)
+						{
+								<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
+									@item.Name
+									@if (item.CurrentStock <= item.MinimumStock)
+									{
+										<span class="badge bg-danger rounded-pill">@item.CurrentStock</span>
+
+									}
+									else
+									{
+										<span class="badge bg-primary rounded-pill">@item.CurrentStock</span>
+									}
+								</li>
+						}
+					}
+					</ul>
+						@* <li class="list-group-item d-flex bg-transparent justify-content-between align-items-center border-top">
 							Farine <span class="badge bg-success rounded-pill">70</span>
 						</li>
 						<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
@@ -141,8 +161,7 @@
 						</li>
 						<li class="list-group-item d-flex bg-transparent justify-content-between align-items-center">
 							Sucre <span class="badge bg-warning text-dark rounded-pill">10</span>
-						</li>
-					</ul>
+						</li> *@
 				</div>
 				
 			</div>

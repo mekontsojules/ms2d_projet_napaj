@@ -10,6 +10,7 @@ using OfficeOpenXml.Style;
 using DinkToPdf;
 using DinkToPdf.Contracts;
 using System.Text;
+using Microsoft.Identity.Client;
 
 namespace Ms2dNapaj.Pages.Ingredient
 {
@@ -28,6 +29,9 @@ namespace Ms2dNapaj.Pages.Ingredient
 
 		public List<Ms2dNapaj.Models.Ingredient> Ingredients { get; set; }
 		public string ErrorMessage { get; set; }
+		public string message { get; set; }
+		[BindProperty]
+		public bool Ismessage { get; set; }
 
 		public void OnGet()
 		{
@@ -97,7 +101,25 @@ namespace Ms2dNapaj.Pages.Ingredient
 			}
 		}
 
+		public async Task<IActionResult> OnGetDeleteIngredient( int id)
+		{
+			try
+			{
+				var ing = _context.Ingredients.Where(i => i.Id == id).FirstOrDefault();
+				_context.Ingredients.Remove(ing);
+				await _context.SaveChangesAsync();
+				datastatique.ismessage = false;
+			}
+			catch(Exception ex)
+			{
+				datastatique.ismessage = true;
+				datastatique.message = "Vous ne pouvez pas supprimer cet ingredient car elle est utilisé pour une recette actuellement ! ";
+				ViewData["error"] = "Vous ne pouvez pas supprimer cet ingredient car elle est utilisé pour une recette actuellement ! ";
+			}
+			
 
+			return RedirectToPage("./Index");
+		}
 		public IActionResult OnGetGenerateShoppingListPDF()
 		{
 			// Sélection des ingrédients dans la base de données

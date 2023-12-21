@@ -142,7 +142,8 @@
 
 		// Prevent the user from leaving the page if there is an active upload.
 		// Most browsers won't show the custom message.  So make the relevant UI elements bounce using CSS.
-		$(window).on('beforeunload.fancy_fileupload', function(e) {
+		/*
+$(window).on('beforeunload.fancy_fileupload', function(e) {
 			var active = $('.ff_fileupload_uploading, .ff_fileupload_starting');
 			var queued = $('.ff_fileupload_queued');
 
@@ -157,8 +158,7 @@
 				if (active.length)  return Translate('There is a file upload still in progress.  Leaving the page will cancel the upload.\n\nAre you sure you want to leave this page?');
 				if (queued.length)  return Translate('There is a file that was added to the queue but the upload has not been started.  Leaving the page will clear the queue and not upload the file.\n\nAre you sure you want to leave this page?');
 			}
-		});
-
+		});*/
 		// Create some extra DOM nodes for preview checking.
 		var audioelem = document.createElement('audio');
 		var videoelem = document.createElement('video');

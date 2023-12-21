@@ -11,6 +11,7 @@
         public decimal MinimumStock { get; set; }
         public int? AllergenId { get; set; }
         public string UnitedMesure { get;set; }
+        public string? Code { get; set; }
         public virtual Supplier Supplier { get; set; }
         public virtual Allergen Allergen { get; set; }  
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "vB8aXjqpJOGUyohqDjaOyJek2ldmSYvA5ce2hXA5MFo=",
+  "Hash": "JZgx6VW5sxvFIdHBRqXAk0Dh+G3y02JTRZCshLtZhEw=",
   "Source": "Ms2dNapaj",
   "BasePath": "_content/Ms2dNapaj",
   "Mode": "Default",
@@ -15536,6 +15536,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\shopping_lists\\list_achat_20231220215009.pdf"
+    },
+    {
+      "Identity": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\shopping_lists\\list_achat_20231221104644.pdf",
+      "SourceId": "Ms2dNapaj",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\code\\napaj\\Ms2dNapaj\\wwwroot\\",
+      "BasePath": "_content/Ms2dNapaj",
+      "RelativePath": "shopping_lists/list_achat_20231221104644.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\shopping_lists\\list_achat_20231221104644.pdf"
     },
     {
       "Identity": "C:\\Users\\jrsme\\.nuget\\packages\\microsoft.aspnetcore.identity.ui\\7.0.13\\staticwebassets\\V5\\css\\site.css",

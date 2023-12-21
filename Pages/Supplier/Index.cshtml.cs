@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using Ms2dNapaj.DAL;
+using Ms2dNapaj.Models;
 
 namespace Ms2dNapaj.Pages.Supplier
 {
@@ -29,6 +30,25 @@ namespace Ms2dNapaj.Pages.Supplier
                 Suppliers = new List<Ms2dNapaj.Models.Supplier>(); // Initialisation d'une liste vide en cas d'échec
                 // Gestion des erreurs
             }
+        }
+
+
+
+
+        public async Task<IActionResult> OnGetDeleteSupplier(int id)
+        {
+            try
+            {
+                var ing = _context.Suppliers.Where(i => i.Id == id).FirstOrDefault();
+                _context.Suppliers.Remove(ing);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+            }
+
+
+            return RedirectToPage("./Index");
         }
     }
 }

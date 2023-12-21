@@ -269,6 +269,9 @@ namespace Ms2dNapaj.Migrations
                     b.Property<int?>("AllergenId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Code")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<decimal>("CurrentStock")
                         .HasColumnType("decimal(18,2)");
 

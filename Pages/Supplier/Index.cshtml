@@ -96,13 +96,10 @@
                                         </td>
 
                                         <td>
-                                            <a asp-page="/DetailsIngredient" asp-route-id="1" class="btn btn-info">
-                                                <i class='bx bx-info-circle'></i>
-                                            </a>
-                                            <a asp-page="/EditIngredient" asp-route-id="1" class="btn btn-warning">
+                                            <a asp-page="./Edit" asp-route-id="@supplier.Id" class="btn btn-warning">
                                                 <i class='bx bx-edit'></i>
                                             </a>
-                                            <a asp-page="/DeleteIngredient" asp-route-id="1" class="btn btn-danger">
+                                            <a asp-page-handler="DeleteSupplier" asp-route-id="@supplier.Id" class="btn btn-danger">
                                                 <i class='bx bx-trash'></i>
                                             </a>
                                         </td>

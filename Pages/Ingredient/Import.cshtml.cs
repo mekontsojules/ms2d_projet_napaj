@@ -59,7 +59,7 @@ namespace Ms2dNapaj.Pages.Ingredient
 						if (codeColumnIndex == -1 || nomColumnIndex == -1 || priceColumnIndex == -1 || fournisseurColumnIndex==-1)
 						{
 							// Gérez le cas où les colonnes nécessaires ne sont pas présentes
-							return RedirectToPage("/Index");
+							return RedirectToPage("./Index");
 						}
 
 						while (!parser.EndOfData)

@@ -5,30 +5,46 @@
     ViewData["Title"] = "Edit";
   
 }
-
-<h1>Edit</h1>
-
-<h4>Allergen</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form method="post">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Allergen.Id" />
-            <div class="form-group">
-                <label asp-for="Allergen.Name" class="control-label"></label>
-                <input asp-for="Allergen.Name" class="form-control" />
-                <span asp-validation-for="Allergen.Name" class="text-danger"></span>
+<div class="page-wrapper">
+    <div class="page-content">
+        <div class="page-breadcrumb d-none d-sm-flex align-items-center mb-3">
+            <div class="breadcrumb-title pe-3">Allergene</div>
+            <div class="ps-3">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 p-0">
+                        <li class="breadcrumb-item">
+                            <a asp-page="./Index"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Mise a jour</li>
+                    </ol>
+                </nav>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
+
+    <h1>Edit</h1>
+
+    <h4>Allergen</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Allergen.Id" />
+                <div class="form-group">
+                    <label asp-for="Allergen.Name" class="control-label"></label>
+                    <input asp-for="Allergen.Name" class="form-control" />
+                    <span asp-validation-for="Allergen.Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Save" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
     </div>
-</div>
 
-<div>
-    <a asp-page="./Index">Back to List</a>
-</div>
+    <div>
+        <a asp-page="./Index">Back to List</a>
+    </div>
 
-
+    </div>
+    </div>
